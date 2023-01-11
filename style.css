@@ -718,7 +718,7 @@ h1{
 .project-img{
     width: 100%;
     display: block;
-    border-radius: 15px;
+    border-radius: 10px;
     transition: .3s;
 }
 .project:hover{
