@@ -347,7 +347,7 @@ h1{
     .main .section1{
         background-image: url(./img/background.jpg);
         background-size: cover;
-        background-position: center 50px;
+        background-position: center -30px;
     }
 }
 
