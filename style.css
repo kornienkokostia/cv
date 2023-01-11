@@ -712,7 +712,7 @@ h1{
     position: relative;
     width: 90%;
     overflow: hidden;
-    border-radius: 15px;
+    border-radius: 10px;
     transition: .3s cubic-bezier(0,0,.5,1);
 }
 .project-img{
