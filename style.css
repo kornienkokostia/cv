@@ -720,6 +720,12 @@ h1{
     display: block;
     border-radius: 10px;
     transition: .3s;
+    object-fit: cover;
+}
+.project-link{
+    aspect-ratio: 2880/1620;
+    height: 100%;
+    display: flex;
 }
 .project:hover{
     scale: 1.05;
