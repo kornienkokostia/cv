@@ -13,9 +13,11 @@ let paddingFromTop = window.innerWidth > 1024 ? 120 : -430
 menuLinks[0].classList.add('active-link')
 mobileMenuLinks[0].classList.add('active-link')
 menuItems.map(el => {
-    el.addEventListener('click', ()=>{
-        window.scrollTo({ top: document.querySelector(`.section-${[...el.classList][1]}`).offsetTop + 1 - paddingFromTop, 
-        behavior: 'smooth' })
+    el.addEventListener('click', () => {
+        window.scrollTo({
+            top: document.querySelector(`.section-${[...el.classList][1]}`).offsetTop + 1 - paddingFromTop,
+            behavior: 'smooth'
+        })
     })
 })
 mobileMenuLinks.map(el => el.addEventListener('click', () => {
@@ -25,7 +27,7 @@ mobileMenuLinks.map(el => el.addEventListener('click', () => {
 window.addEventListener('resize', () => {
     paddingFromTop = window.innerWidth > 1024 ? 120 : -430
     window.innerHeight >= 512 ? document.querySelector('.mobive-nav-menu').style.overflowY = 'hidden'
-    : document.querySelector('.mobive-nav-menu').style.overflowY = 'scroll'
+        : document.querySelector('.mobive-nav-menu').style.overflowY = 'scroll'
     if (window.innerWidth > 1024) {
         document.querySelector('.menu-btn').classList.remove('menu-btn-active')
         document.querySelector('.header-nav-logo').classList.remove('header-nav-logo-active')
@@ -34,12 +36,14 @@ window.addEventListener('resize', () => {
         document.querySelector('.mobive-nav-menu').classList.remove('mobile-menu-active')
     }
 })
-document.querySelector('.button-container').addEventListener('click', ()=>{
-    window.scrollTo({ top: document.querySelector(`.section-contacts`).offsetTop + 1 - paddingFromTop, 
-        behavior: 'smooth' })
+document.querySelector('.button-container').addEventListener('click', () => {
+    window.scrollTo({
+        top: document.querySelector(`.section-contacts`).offsetTop + 1 - paddingFromTop,
+        behavior: 'smooth'
+    })
 })
 window.addEventListener('scroll', () => {
-    
+
     if (window.pageYOffset + paddingFromTop > document.querySelector(`.section-home`).offsetTop) {
         menuLinks.map(el => el.classList.remove('active-link'))
         mobileMenuLinks.map(el => el.classList.remove('active-link'))
@@ -76,31 +80,25 @@ window.addEventListener('scroll', () => {
         menuLinks[5].classList.add('active-link')
         mobileMenuLinks[5].classList.add('active-link')
     }
-    if (window.pageYOffset + paddingFromTop > document.querySelector(`.section-code`).offsetTop) {
+    if (window.pageYOffset + paddingFromTop > document.querySelector(`.section-contacts`).offsetTop) {
         menuLinks.map(el => el.classList.remove('active-link'))
         mobileMenuLinks.map(el => el.classList.remove('active-link'))
         menuLinks[6].classList.add('active-link')
         mobileMenuLinks[6].classList.add('active-link')
     }
-    if (window.pageYOffset + paddingFromTop > document.querySelector(`.section-contacts`).offsetTop) {
-        menuLinks.map(el => el.classList.remove('active-link'))
-        mobileMenuLinks.map(el => el.classList.remove('active-link'))
-        menuLinks[7].classList.add('active-link')
-        mobileMenuLinks[7].classList.add('active-link')
-    }
     if (Math.round(window.scrollY + window.innerHeight) === document.body.scrollHeight) {
         menuLinks.map(el => el.classList.remove('active-link'))
         mobileMenuLinks.map(el => el.classList.remove('active-link'))
-        menuLinks[7].classList.add('active-link')
-        mobileMenuLinks[7].classList.add('active-link')
+        menuLinks[6].classList.add('active-link')
+        mobileMenuLinks[6].classList.add('active-link')
     }
 })
 
-document.querySelector('.menu-btn').addEventListener('click', ()=>{
+document.querySelector('.menu-btn').addEventListener('click', () => {
     hideMobileMenu()
     window.innerHeight >= 512 ? document.querySelector('.mobive-nav-menu').style.overflowY = 'hidden'
-    : document.querySelector('.mobive-nav-menu').style.overflowY = 'scroll' 
+        : document.querySelector('.mobive-nav-menu').style.overflowY = 'scroll'
     document.body.classList.toggle('body-overflow')
-        
+
 })
 
